@@ -1,0 +1,72 @@
+{
+  "name": "can-view-href",
+  "version": "0.0.0",
+  "description": "Make flexible route links",
+  "homepage": "https://canjs.com",
+  "author": {
+    "name": "Bitovi",
+    "email": "contact@bitovi.com",
+    "url": "http://bitovi.com"
+  },
+  "scripts": {
+    "preversion": "npm test && npm run build",
+    "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
+    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "testee": "testee src/test/test.html --browsers firefox",
+    "test": "npm run jshint && npm run testee",
+    "jshint": "jshint src/. --config",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "build": "node build.js",
+    "document": "documentjs",
+    "develop": "can-serve --static --develop --port 8080"
+  },
+  "main": "dist/cjs/can-view-href",
+  "browser": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "keywords": [
+    "canjs"
+  ],
+  "system": {
+    "main": "can-view-href",
+    "directories": {
+      "lib": "src"
+    },
+    "configDependencies": [
+      "live-reload"
+    ],
+    "npmIgnore": [
+      "documentjs",
+      "testee",
+      "generator-donejs",
+      "donejs-cli",
+      "steal-tools"
+    ],
+    "npmAlgorithm": "flat"
+  },
+  "dependencies": {
+    "can": "^2.3.16",
+    "jquery": "~2.2.1"
+  },
+  "devDependencies": {
+    "documentjs": "^0.4.2",
+    "jshint": "^2.9.1",
+    "cssify": "^0.6.0",
+    "steal": "^0.14.0",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.14.0",
+    "testee": "^0.2.4",
+    "generator-donejs": "^0.7.0",
+    "donejs-cli": "^0.7.0",
+    "can-ssr": "^0.11.6"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "sites": {
+    "docs": {
+      "dest": "docs",
+      "parent": "can-view-href",
+      "pageConfig": {
+        "page": "docs"
+      },
+      "glob": {
+        "pattern": "src/**/*.{js,md}"
+      }
+    }
+  }
+}
