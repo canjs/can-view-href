@@ -1,7 +1,8 @@
 require('can/route/route');
-require('can/test/test');
-require('./can-view-href');
 require('steal-qunit');
+
+require('./test/helper.js');
+require('./can-view-href');
 
 var makeIframe = function(src){
 	var iframe = document.createElement('iframe');
