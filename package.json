@@ -54,7 +54,7 @@
     "npmAlgorithm": "flat"
   },
   "dependencies": {
-    "can": "^2.3.16",
+    "can": "^3.0.0-pre.0",
     "jquery": "~2.2.1"
   },
   "devDependencies": {
