@@ -1,10 +1,14 @@
-# can-view-href
+# can-view-href (DEPRECATED)
 
 [![Build Status](https://travis-ci.org/canjs/can-view-href.png?branch=master)](https://travis-ci.org/canjs/can-view-href)
 
+*The href plugin have been deprecated in favor of the [routeUrl helper](https://canjs.com/docs/can.stache.helpers.routeUrl.html) instead like: `href="{{routeUrl prop=value}}"`. It will still be maintained up to 3.0 and potentially after. Projects using can-view-href should consider switching to the [routeUrl helper](https://canjs.com/docs/can.stache.helpers.routeUrl.html)*
+
+*The setter plugin (and the attributes plugin) have been deprecated in favor of the [define plugin](https://canjs.com/docs/can.Map.prototype.define.html), which provides the same functionality. It will still be maintained up to 3.0 and potentially after. Projects using setters should consider switching to [define setters](https://canjs.com/docs/can.Map.prototype.define.set.html).*
+
 Make flexible route links
 
-## Usage
+## Installation
 
 ### ES6 use
 
@@ -53,7 +57,58 @@ Load the `global` version of the plugin:
 <script src='./node_modules/can-view-href/dist/global/can-view-href.js'></script>
 ```
 
-## Contributing
+## Usage
+
+- Signature: `can-href='{[attrName=attrValue...]}`
+- Parameters
+	+ `attrName` - `{String}`
+	+ `attrValue` `can.stache.key`
+
+Sets an element's href attribute so that it's url will set the specified attribute values on [can.route].
+
+With no pretty routing rules, the following:
+
+```
+<li><a can-href='{page="recipe" id=5}'>{{recipe.name}}</a></li>
+```
+
+produces:
+
+```
+<li><a href='#!&page=5&id=5'>{{recipe.name}}</a></li>
+```
+
+If pretty route is defined like:
+
+```
+can.route(":page/:id")
+```
+
+The previous use of `can-href` will instead produce:
+
+```
+<li><a href='#!page/5'>{{recipe.name}}</a></li>
+```
+
+You can use values from stache's scope like:
+
+```
+<li><a can-href='{page="recipe" id=recipeId}'>{{recipe.name}}</a></li>
+```
+
+If `recipeId` was 6:
+
+```
+<li><a href='#!page/6'>{{recipe.name}}</a></li>
+```
+
+If `recipeId` is observable and changes to 7:
+
+```
+<li><a href='#!page/7'>{{recipe.name}}</a></li>
+```
+
+## Making Changes
 
 ### Making a Build
 
