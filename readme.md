@@ -1,10 +1,8 @@
 # can-view-href (DEPRECATED)
 
-[![Build Status](https://travis-ci.org/canjs/can-view-href.png?branch=master)](https://travis-ci.org/canjs/can-view-href)
-
 *The href plugin have been deprecated in favor of the [routeUrl helper](https://canjs.com/docs/can.stache.helpers.routeUrl.html) instead like: `href="{{routeUrl prop=value}}"`. It will still be maintained up to 3.0 and potentially after. Projects using can-view-href should consider switching to the [routeUrl helper](https://canjs.com/docs/can.stache.helpers.routeUrl.html)*
 
-*The setter plugin (and the attributes plugin) have been deprecated in favor of the [define plugin](https://canjs.com/docs/can.Map.prototype.define.html), which provides the same functionality. It will still be maintained up to 3.0 and potentially after. Projects using setters should consider switching to [define setters](https://canjs.com/docs/can.Map.prototype.define.set.html).*
+[![Build Status](https://travis-ci.org/canjs/can-view-href.png?branch=master)](https://travis-ci.org/canjs/can-view-href)
 
 Make flexible route links
 
