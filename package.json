@@ -39,9 +39,6 @@
   ],
   "system": {
     "main": "can-view-href",
-    "directories": {
-      "lib": "src"
-    },
     "configDependencies": [
       "live-reload"
     ],
@@ -53,19 +50,24 @@
     ],
     "npmAlgorithm": "flat"
   },
-  "dependencies": {
-    "can": "^3.0.0-pre.0",
-    "jquery": "~2.2.1"
-  },
   "devDependencies": {
-    "jshint": "^2.9.1",
+    "can-map": "^3.0.0-pre.11",
+    "can-ssr": "^0.11.6",
     "cssify": "^0.6.0",
-    "steal": "^0.14.0",
-    "steal-qunit": "^0.1.1",
-    "steal-tools": "^0.14.0",
-    "testee": "^0.2.4",
-    "generator-donejs": "^0.7.0",
     "donejs-cli": "^0.7.0",
-    "can-ssr": "^0.11.6"
+    "generator-donejs": "^0.7.0",
+    "jshint": "^2.9.1",
+    "steal": "^0.16.0",
+    "steal-qunit": "^0.1.1",
+    "steal-tools": "^0.16.0",
+    "testee": "^0.2.4"
+  },
+  "dependencies": {
+    "can-compute": "^3.0.0-pre.17",
+    "can-route": "^3.0.0-pre.19",
+    "can-stache": "^3.0.0-pre.24",
+    "can-util": "^3.0.0-pre.68",
+    "can-view-callbacks": "^3.0.0-pre.8",
+    "can-view-scope": "^3.0.0-pre.17"
   }
 }

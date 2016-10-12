@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+	<meta http-equiv="x-ua-compatible" content="IE=Edge"/>
+</head>
+<body>
+	<script>
+	window.isReady = window.parent.isReady || function(el) {
+		console.log(el);
+	};
+	window.hasError = window.parent.hasError || function(error) {
+		console.log("error in autoload", error)
+	};
+	window.removeMyself = window.parent.removeMyself;
+</script>
+<script type="text/stache" id="basics">
+	<a can-href="{page='recipe' id=recipe.id}" id='anchor-el'>{{recipe.name}}</a>
+</script>
+<script src='../node_modules/steal/steal.js' main='@empty'>
+	require('can-view-href');
+	var stache = require('can-stache');
+	var CanMap = require('can-map');
+	var route = require('can-route');
+
+	var data = new CanMap({
+		recipe: {
+			id: 5,
+			name: 'Cool recipe'
+		}
+	});
+	var template = stache.from("basics");
+	document.body.appendChild( template(data) );
+
+	isReady(document.getElementById("anchor-el"), data, function(){
+		route(":page/:id");
+	});
+</script>
+</body>
+</html>

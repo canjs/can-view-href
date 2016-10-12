@@ -1,8 +1,7 @@
-require('can/route/route');
+require('can-route');
 require('steal-qunit');
 
-require('./test/helper.js');
-require('./can-view-href');
+require('../can-view-href');
 
 var makeIframe = function(src){
 	var iframe = document.createElement('iframe');
@@ -19,17 +18,17 @@ var makeIframe = function(src){
 	};
 	window.isReady = function(el, viewModel, setPrettyUrl) {
 
-		equal(el.find('a').attr('href'), "#!&page=recipe&id=5", "should set unpretty href attribute");
+		equal(el.getAttribute("href"), "#!&page=recipe&id=5", "should set unpretty href attribute");
 
 		viewModel.recipe.attr('id', 7);
-		equal(el.find('a').attr('href'), "#!&page=recipe&id=7", "should update href");
+		equal(el.getAttribute("href"), "#!&page=recipe&id=7", "should update href");
 
 		setPrettyUrl();
 		viewModel.recipe.attr('id', 8);
-		equal(el.find('a').attr('href'), "#!recipe/8", "should set pretty href");
+		equal(el.getAttribute("href"), "#!recipe/8", "should set pretty href");
 
 		viewModel.recipe.attr('id', 9);
-		equal(el.find('a').attr('href'), "#!recipe/9", "should update pretty href");
+		equal(el.getAttribute("href"), "#!recipe/9", "should update pretty href");
 
 		window.removeMyself();
 	};
@@ -37,10 +36,10 @@ var makeIframe = function(src){
 	iframe.src = src;
 };
 
-QUnit.module("can/view/href");
+QUnit.module("can-view-href");
 if(window.steal) {
 	asyncTest("the basics are able to work for steal", function(){
-		makeIframe(  can.test.path("src/test/basics.html?"+Math.random()) );
+		makeIframe(  __dirname + "/basics.html?"+Math.random());
 	});
 }
 //else if(window.requirejs) {
