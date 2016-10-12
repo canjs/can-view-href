@@ -6,55 +6,6 @@
 
 Make flexible route links
 
-## Installation
-
-### ES6 use
-
-With StealJS, you can import this module directly in a template that is autorendered:
-
-```js
-import plugin from 'can-view-href';
-```
-
-### CommonJS use
-
-Use `require` to load `can-view-href` and everything else
-needed to create a template that uses `can-view-href`:
-
-```js
-var plugin = require("can-view-href");
-```
-
-## AMD use
-
-Configure the `can` and `jquery` paths and the `can-view-href` package:
-
-```html
-<script src="require.js"></script>
-<script>
-	require.config({
-	    paths: {
-	        "jquery": "node_modules/jquery/dist/jquery",
-	        "can": "node_modules/canjs/dist/amd/can"
-	    },
-	    packages: [{
-		    	name: 'can-view-href',
-		    	location: 'node_modules/can-view-href/dist/amd',
-		    	main: 'lib/can-view-href'
-	    }]
-	});
-	require(["main-amd"], function(){});
-</script>
-```
-
-### Standalone use
-
-Load the `global` version of the plugin:
-
-```html
-<script src='./node_modules/can-view-href/dist/global/can-view-href.js'></script>
-```
-
 ## Usage
 
 - Signature: `can-href='{[attrName=attrValue...]}`

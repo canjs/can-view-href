@@ -1,15 +1,16 @@
-@page can.view.href can-href
-@parent can.view.bindings
+@module {undefined} can-view-href
+@parent can-legacy
+@package ./package.json
 
-@deprecated {2.3} Use the [can.stache.helpers.routeUrl routeUrl helper] instead like:
+@deprecated {2.3} Use the [can-stache.helpers.routeUrl routeUrl helper] instead like:
 `href="{{routeUrl prop=value}}"`.
 
-@description Sets an element's href attribute so that it's url will set the specified attribute values on [can.route].
+@description Sets an element's href attribute so that it's url will set the specified attribute values on [can-route].
 
-@siganture `can-href='{[attrName=attrValue...]}'`
+@signature `can-href='{[attrName=attrValue...]}'`
 
-@param {String} attrName
-@param {can.stache.key} attrValue
+  @param {String} attrName
+  @param {can-stache/expressions/key-lookup} attrValue
 
 @body
 
