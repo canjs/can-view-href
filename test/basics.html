@@ -16,23 +16,30 @@
 <script type="text/stache" id="basics">
 	<a can-href="{page='recipe' id=recipe.id}" id='anchor-el'>{{recipe.name}}</a>
 </script>
-<script src='../node_modules/steal/steal.js' main='@empty'>
-	require('can-view-href');
-	var stache = require('can-stache');
-	var CanMap = require('can-map');
-	var route = require('can-route');
+<script src='../../../node_modules/steal/steal.js' main='@empty'></script>
+<script src='../node_modules/steal/steal.js' main='@empty'></script>
+<script>
+	steal.done().then(function() {
+		System.import('can-view-href').then(function() {
+			System.import('can-stache').then(function(stache) {
+				System.import('can-map').then(function(CanMap) {
+					System.import('can-route').then(function(route) {
+						var data = new CanMap({
+							recipe: {
+								id: 5,
+								name: 'Cool recipe'
+							}
+						});
+						var template = stache.from("basics");
+						document.body.appendChild( template(data) );
 
-	var data = new CanMap({
-		recipe: {
-			id: 5,
-			name: 'Cool recipe'
-		}
-	});
-	var template = stache.from("basics");
-	document.body.appendChild( template(data) );
-
-	isReady(document.getElementById("anchor-el"), data, function(){
-		route(":page/:id");
+						isReady(document.getElementById("anchor-el"), data, function(){
+							route(":page/:id");
+						});
+					});
+				});
+			});
+		});
 	});
 </script>
 </body>
