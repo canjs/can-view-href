@@ -64,11 +64,11 @@
     "testee": "^0.2.4"
   },
   "dependencies": {
-    "can-compute": "^3.0.0-pre.17",
-    "can-route": "^3.0.0-pre.19",
-    "can-stache": "^3.0.0-pre.24",
-    "can-util": "^3.0.0-pre.68",
-    "can-view-callbacks": "^3.0.0-pre.8",
-    "can-view-scope": "^3.0.0-pre.17"
+    "can-compute": "^3.0.0",
+    "can-route": "^3.0.0",
+    "can-stache": "^3.0.1",
+    "can-util": "^3.0.1",
+    "can-view-callbacks": "^3.0.0",
+    "can-view-scope": "^3.0.0"
   }
 }
