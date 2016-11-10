@@ -37,7 +37,7 @@ var makeIframe = function(src){
 };
 
 QUnit.module("can-view-href");
-if(window.steal) {
+if(window.steal && __dirname !== '/') {
 	asyncTest("the basics are able to work for steal", function(){
 		makeIframe(  __dirname + "/basics.html?"+Math.random());
 	});
