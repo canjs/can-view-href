@@ -23,16 +23,6 @@
     "develop": "can-serve --static --develop --port 8080"
   },
   "main": "dist/cjs/can-view-href",
-  "browser": {
-    "transform": [
-      "cssify"
-    ]
-  },
-  "browserify": {
-    "transform": [
-      "cssify"
-    ]
-  },
   "keywords": [
     "canjs",
     "donejs",
@@ -54,7 +44,6 @@
   "devDependencies": {
     "can-map": "^3.0.0-pre.11",
     "can-ssr": "^0.11.6",
-    "cssify": "^0.6.0",
     "donejs-cli": "^0.7.0",
     "generator-donejs": "^0.7.0",
     "jshint": "^2.9.1",
