@@ -22,7 +22,7 @@
     "build": "node build.js",
     "develop": "can-serve --static --develop --port 8080"
   },
-  "main": "dist/cjs/can-view-href",
+  "main": "can-view-href",
   "keywords": [
     "canjs",
     "donejs",
