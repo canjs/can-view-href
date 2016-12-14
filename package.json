@@ -44,13 +44,13 @@
   "devDependencies": {
     "can-map": "^3.0.0-pre.11",
     "can-ssr": "^0.11.6",
-    "donejs-cli": "^0.7.0",
-    "generator-donejs": "^0.7.0",
+    "donejs-cli": "^0.9.5",
+    "generator-donejs": "^0.9.6",
     "jshint": "^2.9.1",
     "steal": "^0.16.0",
     "steal-qunit": "^0.1.1",
     "steal-tools": "^0.16.0",
-    "testee": "^0.2.4"
+    "testee": "^0.3.0"
   },
   "dependencies": {
     "can-compute": "^3.0.0",
