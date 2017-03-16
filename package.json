@@ -43,7 +43,7 @@
   "devDependencies": {
     "can-map": "^3.0.0-pre.11",
     "can-ssr": "^0.11.6",
-    "donejs-cli": "^0.9.5",
+    "donejs-cli": "^1.0.0",
     "generator-donejs": "^0.9.6",
     "jshint": "^2.9.1",
     "steal": "^1.2.10",
