@@ -1,5 +1,7 @@
 # can-view-href (DEPRECATED)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-view-href.svg)](https://greenkeeper.io/)
+
 *The href plugin have been deprecated in favor of the [routeUrl helper](https://canjs.com/docs/can.stache.helpers.routeUrl.html) instead like: `href="{{routeUrl prop=value}}"`. It will still be maintained up to 3.0 and potentially after. Projects using can-view-href should consider switching to the [routeUrl helper](https://canjs.com/docs/can.stache.helpers.routeUrl.html)*
 
 [![Build Status](https://travis-ci.org/canjs/can-view-href.png?branch=master)](https://travis-ci.org/canjs/can-view-href)
