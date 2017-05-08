@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "can-map": "^3.0.0-pre.11",
+    "can-map": "3.0.7",
     "can-ssr": "^0.11.6",
     "donejs-cli": "^0.9.5",
     "generator-donejs": "^0.9.6",
