@@ -11,11 +11,11 @@
   "scripts": {
     "preversion": "npm test && npm run build",
     "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
-    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "postversion": "git push --tags && git checkout can-reflect && git branch -D release && git push",
     "testee": "testee test/test.html --browsers firefox",
     "test": "npm run jshint && npm run testee",
     "jshint": "jshint src/. --config",
-    "release:pre": "npm version prerelease && npm publish",
+    "release:pre": "npm version prerelease && npm publish --tag=pre",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "can-map": "^3.0.0-pre.11",
+    "can-map": "^3.1.0-pre.10",
     "can-ssr": "^0.11.6",
     "donejs-cli": "^0.9.5",
     "generator-donejs": "^0.9.6",
@@ -52,11 +52,11 @@
     "testee": "^0.3.1"
   },
   "dependencies": {
-    "can-compute": "^3.0.0",
-    "can-route": "^3.0.0",
-    "can-stache": "^3.0.1",
+    "can-compute": "^3.1.0-pre.9",
+    "can-route": "^3.1.0-pre.2",
+    "can-stache": "^3.1.0-pre.4",
     "can-util": "^3.0.1",
-    "can-view-callbacks": "^3.0.0",
-    "can-view-scope": "^3.0.0"
+    "can-view-callbacks": "^3.0.7-pre.1",
+    "can-view-scope": "^3.2.0-pre.10"
   }
 }
