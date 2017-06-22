@@ -56,7 +56,7 @@
     "can-route": "^3.1.0-pre.2",
     "can-stache": "^3.1.0-pre.4",
     "can-util": "^3.9.0-pre.4",
-    "can-view-callbacks": "^3.0.7-pre.1",
+    "can-view-callbacks": "^3.1.0-pre.0",
     "can-view-scope": "^3.2.0-pre.10"
   }
 }
