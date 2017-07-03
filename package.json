@@ -52,7 +52,7 @@
     "testee": "^0.3.1"
   },
   "dependencies": {
-    "can-compute": "^3.1.0-pre.9",
+    "can-compute": "^3.3.1",
     "can-route": "^3.1.0-pre.2",
     "can-stache": "^3.1.0-pre.4",
     "can-util": "^3.9.0-pre.4",
