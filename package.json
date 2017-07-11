@@ -1,6 +1,6 @@
 {
   "name": "can-view-href",
-  "version": "3.0.4",
+  "version": "3.1.0",
   "description": "Make flexible route links",
   "homepage": "https://canjs.com",
   "author": {
@@ -14,13 +14,12 @@
     "postversion": "git push --tags && git checkout master && git branch -D release && git push",
     "testee": "testee test/test.html --browsers firefox",
     "test": "npm run jshint && npm run testee",
-    "jshint": "jshint src/. --config",
-    "release:pre": "npm version prerelease && npm publish",
+    "jshint": "jshint *.js test/*.js --config",
+    "release:pre": "npm version prerelease && npm publish --tag=pre",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
-    "build": "node build.js",
-    "develop": "can-serve --static --develop --port 8080"
+    "build": "node build.js"
   },
   "main": "can-view-href",
   "keywords": [
@@ -41,22 +40,20 @@
     ]
   },
   "devDependencies": {
-    "can-map": "^3.0.0-pre.11",
+    "can-map": "^3.3.1",
     "can-ssr": "^0.11.6",
-    "donejs-cli": "^1.0.1",
-    "generator-donejs": "^1.0.5",
     "jshint": "^2.9.1",
     "steal": "^1.2.10",
     "steal-qunit": "^1.0.1",
     "steal-tools": "^1.1.2",
-    "testee": "^0.5.0"
+    "testee": "^0.7.0"
   },
   "dependencies": {
-    "can-compute": "^3.0.0",
-    "can-route": "^3.0.0",
-    "can-stache": "^3.0.1",
-    "can-util": "^3.0.1",
-    "can-view-callbacks": "^3.0.0",
-    "can-view-scope": "^3.0.0"
+    "can-compute": "^3.3.1",
+    "can-route": "^3.1.0-pre.2",
+    "can-stache": "^3.1.0-pre.4",
+    "can-util": "^3.9.5",
+    "can-view-callbacks": "^3.1.0-pre.0",
+    "can-view-scope": "^3.2.0-pre.10"
   }
 }
