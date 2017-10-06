@@ -51,7 +51,7 @@
     "testee": "^0.7.0"
   },
   "dependencies": {
-    "can-compute": "^3.3.1",
+    "can-compute": "3.3.4",
     "can-route": "^3.1.0",
     "can-stache": "^3.1.0",
     "can-util": "^3.9.5",
