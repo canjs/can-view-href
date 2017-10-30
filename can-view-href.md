@@ -1,5 +1,6 @@
 @module {undefined} can-view-href
-@parent can-legacy
+@parent can-views
+@collection can-legacy
 @package ./package.json
 
 @deprecated {2.3} Use the [can-stache.helpers.routeUrl routeUrl helper] instead like:
