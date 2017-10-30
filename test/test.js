@@ -42,12 +42,12 @@ if(window.steal && __dirname !== '/') {
 		makeIframe(  __dirname + "/basics.html?"+Math.random());
 	});
 }
-//else if(window.requirejs) {
-//	asyncTest("the basics are able to work for requirejs", function(){
-//		makeIframe(can.test.path("../../view/href/tests/requirejs-basics.html?"+Math.random()));
-//	});
-//} else {
-//	asyncTest("the basics are able to work standalone", function(){
-//		makeIframe(can.test.path("view/href/tests/standalone-basics.html?"+Math.random()));
-//	});
-//}
+else if(window.requirejs) {
+	asyncTest("the basics are able to work for requirejs", function(){
+		makeIframe(can.test.path("../../view/href/tests/requirejs-basics.html?"+Math.random()));
+	});
+} else {
+	asyncTest("the basics are able to work standalone", function(){
+		makeIframe(can.test.path("view/href/tests/standalone-basics.html?"+Math.random()));
+	});
+}
