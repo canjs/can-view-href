@@ -31,7 +31,7 @@ produces:
 
 If pretty route is defined like:
 
-```js
+```javascript
 can.route(":page/:id")
 ```
 
