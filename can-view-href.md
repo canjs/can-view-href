@@ -32,7 +32,7 @@ produces:
 If pretty route is defined like:
 
 ```js
-can.route(":page/:id")
+can.route( ":page/:id" );
 ```
 
 The previous use of `can-href` will instead produce:
