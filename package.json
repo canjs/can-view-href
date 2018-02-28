@@ -41,7 +41,7 @@
     ]
   },
   "devDependencies": {
-    "can-map": "^3.3.1",
+    "can-map": "^4.0.1",
     "can-ssr": "^0.11.6",
     "detect-cyclic-packages": "^1.1.0",
     "jshint": "^2.9.1",
