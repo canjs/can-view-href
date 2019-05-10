@@ -10,7 +10,7 @@ var makeIframe = function(src){
 		delete window.isReady;
 		delete window.hasError;
 		document.body.removeChild(iframe);
-		start();
+		done();
 	};
 	window.hasError = function(error) {
 		ok(false, error.message);
